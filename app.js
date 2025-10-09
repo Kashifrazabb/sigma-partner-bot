@@ -50,6 +50,7 @@ app.all("/sigmapostback", async (req, res) => {
     const db = await readDB();
     db.traders.push(record);
     await writeDB(db);
+    console.log("inside: "+db)
 
     console.log("✅ Postback saved:", record);
     res.send("OK");
@@ -66,6 +67,7 @@ bot.on("message", async (msg) => {
 
   const db = await readDB();
   const traderRecords = db.traders.filter((t) => t.trader_id === uid);
+  console.log(db)
 
   if (traderRecords.length === 0) {
     bot.sendMessage(chatId, `
@@ -87,7 +89,7 @@ bot.on("message", async (msg) => {
 
     const replyMsg = `
 👤 Trader ID: ${uid}
-📊 Last Status: ${lastEvent.status}
+📊 Last Status: ${lastEvent}
 💰 Total Payout: ${totalPayout}
 🕒 Last Update: ${new Date(lastEvent.time).toLocaleString()}
 `;
