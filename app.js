@@ -6,7 +6,7 @@ import { config } from "dotenv";
 config()
 
 const BOT_TOKEN = process.env.TOKEN;
-const CHANNEL_ID = -1002577956088
+const CHANNEL_ID = -1002007924246
 const PORT = 5000;
 const DB_FILE = "data.json";
 
