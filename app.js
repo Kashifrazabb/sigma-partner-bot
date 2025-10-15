@@ -68,6 +68,10 @@ bot.onText(/\/start/, (msg) => {
 bot.on("message", async (msg) => {
   const chatId = msg.chat.id;
   const uid = msg.text.trim();
+
+  // Ignore commands starting with '/'
+  if (uid.startsWith("/")) return;
+
   const db = await readDB();
   const traderRecord = db.traders.filter((t) => t.trader_id === uid);
 
