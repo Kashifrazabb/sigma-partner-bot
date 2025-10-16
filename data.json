@@ -93,6 +93,46 @@
       "site_id": "N/A",
       "landing_id": "1123026",
       "time": "2025-10-16T23:14:04.821Z"
+    },
+    {
+      "trader_id": "66797908",
+      "click_id": "N/A",
+      "status": "conf",
+      "payout": "0",
+      "event_id": "68f17da518847f0",
+      "site_id": "N/A",
+      "landing_id": "1123026",
+      "time": "2025-10-16T23:20:05.833Z"
+    },
+    {
+      "trader_id": "69130370",
+      "click_id": "N/A",
+      "status": "reg",
+      "payout": "0",
+      "event_id": "68f17f0d1884a46",
+      "site_id": "N/A",
+      "landing_id": "1123026",
+      "time": "2025-10-16T23:26:06.081Z"
+    },
+    {
+      "trader_id": "69130370",
+      "click_id": "N/A",
+      "status": "conf",
+      "payout": "0",
+      "event_id": "68f17f471884a54",
+      "site_id": "N/A",
+      "landing_id": "1123026",
+      "time": "2025-10-16T23:27:04.101Z"
+    },
+    {
+      "trader_id": "69130259",
+      "click_id": "N/A",
+      "status": "conf",
+      "payout": "0",
+      "event_id": "68f17f481884a62",
+      "site_id": "N/A",
+      "landing_id": "1123026",
+      "time": "2025-10-16T23:27:05.041Z"
     }
   ]
 }

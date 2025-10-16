@@ -2,7 +2,11 @@ import express from "express";
 import TelegramBot from "node-telegram-bot-api";
 import { readFile, writeFile, access } from "fs/promises";
 import { config } from "dotenv";
-import path from "path";
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 config()
 
@@ -36,7 +40,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/download', (req, res) => {
-  res.download(path.join(__dirname, 'data.json'));
+  const filePath = path.join(__dirname, 'data.json');
+  res.download(filePath, 'data.json', (err) => {
+    if (err) {
+      console.error('Download error:', err);
+      res.status(500).send('Error downloading file');
+    }
+  });
 });
 
 // Quotex postback endpoint
