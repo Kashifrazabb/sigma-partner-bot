@@ -132,15 +132,19 @@ bot.on("message", async (msg) => {
   if (totalPayout >= 20 && totalPayout < 30 && lastEvent.status == "ftd") {
     replyMsg = `
 CONGRATULATIONS 🎉🍾 YOUR ID IS VERIFIED ✅
-LINK TO MY SVIP: ${firstRecord.invite_svip}
+YOUR DEPOSIT: ${totalPayout}$ 💵💰
+
+1️⃣ LINK TO MY SVIP: ${firstRecord.invite_svip} 💚
 
 ❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Sigma_Quotex_Trader
 📈 START TRADING LIKE A PRO TODAY!`;
   } else if (totalPayout >= 30 && lastEvent.status == "ftd") {
     replyMsg = `
 CONGRATULATIONS 🎉🍾 YOUR ID IS VERIFIED ✅
-LINK TO MY SVIP: ${firstRecord.invite_svip}
-LINK TO MY COMPOUNDING: ${firstRecord.invite_comp}
+YOUR DEPOSIT: ${totalPayout}$ 💵💰
+
+1️⃣ LINK TO MY SVIP: ${firstRecord.invite_svip} 💚
+2️⃣ LINK TO MY COMPOUNDING: ${firstRecord.invite_comp} 💛
 
 ❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Sigma_Quotex_Trader
 📈 START TRADING LIKE A PRO TODAY!`;
@@ -148,7 +152,7 @@ LINK TO MY COMPOUNDING: ${firstRecord.invite_comp}
     replyMsg = `
 ✅✅✅ ACCOUNT CREATED ✅✅✅
 
-YOUR DEPOSITED ${totalPayout} THAT IS LESS THAN 20$. PLEASE DEPOSIT THE REQUIRED AMOUNT ❤️
+YOUR DEPOSITED ${totalPayout}$ THAT IS LESS THAN 20$. PLEASE DEPOSIT THE REQUIRED AMOUNT ❤️
 
 ❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Sigma_Quotex_Trader
 📈 START TRADING LIKE A PRO TODAY!`;
