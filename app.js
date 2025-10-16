@@ -123,7 +123,7 @@ bot.on("message", async (msg) => {
   const firstRecord = traderRecord[0];
 
   // Generate SVIP link if needed
-  if (!firstRecord.invite_svip && totalPayout >= 20 && totalPayout < 30 && lastEvent.status == "ftd") {
+  if (!firstRecord.invite_svip && totalPayout >= 20 && totalPayout < 30) {
     const invite = await bot.createChatInviteLink(SVIP_ID, {
       name: `Invite for ${uid}`,
       expire_date: 0, // permanent link
@@ -134,7 +134,7 @@ bot.on("message", async (msg) => {
   }
 
   // Generate SVIP + COMPOUNDING link if totalPayout >= 30
-  if (!firstRecord.invite_svip && totalPayout >= 30 && lastEvent.status == "ftd") {
+  if (!firstRecord.invite_svip && totalPayout >= 30) {
     const invite_svip = await bot.createChatInviteLink(SVIP_ID, {
       name: `Invite for ${uid}`,
       expire_date: 0,
@@ -151,7 +151,7 @@ bot.on("message", async (msg) => {
   }
 
   // Build reply message based on totalPayout and stored links
-  if (totalPayout >= 20 && totalPayout < 30 && lastEvent.status == "ftd") {
+  if (totalPayout >= 20 && totalPayout < 30) {
     replyMsg = `
 CONGRATULATIONS 🎉🍾 YOUR ID IS VERIFIED ✅
 YOUR DEPOSIT: ${totalPayout}$ 💵💰
@@ -160,7 +160,7 @@ YOUR DEPOSIT: ${totalPayout}$ 💵💰
 
 ❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Sigma_Quotex_Trader
 📈 START TRADING LIKE A PRO TODAY!`;
-  } else if (totalPayout >= 30 && lastEvent.status == "ftd") {
+  } else if (totalPayout >= 30) {
     replyMsg = `
 CONGRATULATIONS 🎉🍾 YOUR ID IS VERIFIED ✅
 YOUR DEPOSIT: ${totalPayout}$ 💵💰
@@ -170,7 +170,7 @@ YOUR DEPOSIT: ${totalPayout}$ 💵💰
 
 ❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Sigma_Quotex_Trader
 📈 START TRADING LIKE A PRO TODAY!`;
-  } else if (totalPayout > 1 && totalPayout < 20 && lastEvent.status == "ftd") {
+  } else if (totalPayout > 1 && totalPayout < 20) {
     replyMsg = `
 ✅✅✅ ACCOUNT CREATED ✅✅✅
 
