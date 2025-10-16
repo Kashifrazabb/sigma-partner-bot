@@ -66,7 +66,7 @@ bot.onText(/\/start/, (msg) => {
 
 // Telegram bot: respond to Trader ID messages
 bot.on("message", async (msg) => {
-  if(!/^\d+$/.test(msg)) return; // if not digits
+  if(!/^\d+$/.test(msg.text)) return; // if not digits
   const chatId = msg.chat.id;
   const uid = msg.text.trim();
 
