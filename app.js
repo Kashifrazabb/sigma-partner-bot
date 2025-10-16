@@ -92,10 +92,9 @@ bot.on("message", async (msg) => {
   }
   else {
     const totalPayout = traderRecord.reduce((sum, t) => sum + Number(t.payout || 0), 0);
-    console.log(totalPayout)
     const lastEvent = traderRecord[traderRecord.length - 1];
     var replyMsg = "";
-    if (totalPayout >= 20 && lastEvent == "ftd") {
+    if (totalPayout >= 20 && lastEvent.status == "ftd") {
       const invite = await bot.createChatInviteLink(CHANNEL_ID, {
         name: `Invite for ${uid}`,
         expire_date: Math.floor(Date.now() / 1000) + 3600, // expires in 1 hour
@@ -109,7 +108,7 @@ bot.on("message", async (msg) => {
   📈 START TRADING LIKE A PRO TODAY!
       `
     }
-    else if (totalPayout > 1 && totalPayout < 20 && lastEvent == "ftd") {
+    else if (totalPayout > 1 && totalPayout < 20 && lastEvent.status == "ftd") {
       replyMsg = `
       ✅✅✅ ACCOUNT CREATED ✅✅✅
       
