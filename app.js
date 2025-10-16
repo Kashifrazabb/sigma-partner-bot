@@ -66,12 +66,11 @@ bot.onText(/\/start/, (msg) => {
 
 // Telegram bot: respond to Trader ID messages
 bot.on("message", async (msg) => {
-  if(!/^\d+$/.test(msg.text)) return; // if not digits
   const chatId = msg.chat.id;
   const uid = msg.text.trim();
 
   // Ignore commands starting with '/'
-  if (uid.startsWith("/")) return;
+  if (uid.startsWith("/") || !/^\d+$/.test(uid)) return;
 
   const db = await readDB();
   const traderRecord = db.traders.filter((t) => t.trader_id === uid);
