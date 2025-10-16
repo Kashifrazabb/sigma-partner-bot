@@ -34,6 +34,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/download', (req, res) => {
+  res.download(path.join(__dirname, 'data.json'));
+});
+
 // Quotex postback endpoint
 app.all("/sigmapostback", async (req, res) => {
   try {
