@@ -6,18 +6,12 @@ import path from 'path';
 
 config()
 
-if (process.env.LOCKED) {
-  console.error("Bot already running!");
-  process.exit(1);
-}
-process.env.LOCKED = true;
-
-
 const BOT_TOKEN = process.env.TOKEN;
 const SVIP_ID = -1002216197397;
 const COMPOUNDING_ID = -1002841055208;
 const PORT = 5000;
 const DB_FILE = "data.json";
+const WEBHOOK_URL = process.env.WEBHOOK_URL || "https://sigma-partner-bot.onrender.com";
 
 // Helper functions for JSON file storage
 async function readDB() {
@@ -34,13 +28,23 @@ async function writeDB(data) {
   await writeFile(DB_FILE, JSON.stringify(data, null, 2));
 }
 
-// Initialize Telegram bot
-const bot = new TelegramBot(BOT_TOKEN, { polling: true });
-
-// Initialize Express
+const bot = new TelegramBot(BOT_TOKEN);
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Set the webhook for Telegram
+const webhookPath = `/bot${BOT_TOKEN}`;
+const webhookURL = `${WEBHOOK_URL}${webhookPath}`;
+await bot.setWebHook(webhookURL);
+
+console.log(`✅ Webhook set to: ${webhookURL}`);
+
+// Handle Telegram updates
+app.post(webhookPath, (req, res) => {
+  bot.processUpdate(req.body);
+  res.sendStatus(200);
+});
 
 app.get('/download', (req, res) => {
   const filePath = path.join(path.resolve(), 'data.json');
