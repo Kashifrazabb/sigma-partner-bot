@@ -2,6 +2,7 @@ import express from "express";
 import TelegramBot from "node-telegram-bot-api";
 import { readFile, writeFile, access } from "fs/promises";
 import { config } from "dotenv";
+import path from "path";
 
 config()
 
