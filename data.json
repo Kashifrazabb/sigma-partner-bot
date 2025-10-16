@@ -1,3 +1,14 @@
 {
-    "traders": []
+    "traders": [   
+        {
+        "trader_id": "68611578",
+        "click_id": "N/A",
+        "status": "ftd",
+        "payout": "30.00",
+        "event_id": "68f040ff1878a37",
+        "site_id": "N/A",
+        "landing_id": "1123026",
+        "time": "2025-10-16T00:49:03.819Z"
+      }
+    ]
 }
