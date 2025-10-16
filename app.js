@@ -6,6 +6,13 @@ import path from 'path';
 
 config()
 
+if (process.env.LOCKED) {
+  console.error("Bot already running!");
+  process.exit(1);
+}
+process.env.LOCKED = true;
+
+
 const BOT_TOKEN = process.env.TOKEN;
 const SVIP_ID = -1002216197397;
 const COMPOUNDING_ID = -1002841055208;
