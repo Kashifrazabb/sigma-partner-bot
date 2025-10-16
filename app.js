@@ -68,7 +68,7 @@ bot.onText(/\/start/, (msg) => {
 // Telegram bot: respond to Trader ID messages
 bot.on("message", async (msg) => {
   const chatId = msg.chat.id;
-  const uid = msg.text.trim();
+  const uid = msg.text?.trim();
 
   // Ignore commands starting with '/' or non-digit messages
   if (uid.startsWith("/") || !/^\d+$/.test(uid)) return;
