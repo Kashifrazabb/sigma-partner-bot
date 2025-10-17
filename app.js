@@ -106,8 +106,9 @@ bot.on("message", async (msg) => {
 
 🌐 CREATE YOUR ACCOUNT NOW: https://market-qx.trade/sign-up/?lid=1123026 
 
-💵 DEPOSIT $20 OR MORE
+💵 DEPOSIT $10 OR MORE
 🎁 50% BONUS CODE: SIGMA50
+🎁 95% BONUS CODE: QX95BOOST
 
 ❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Sigma_Quotex_Trader
 
@@ -123,7 +124,7 @@ bot.on("message", async (msg) => {
   const firstRecord = traderRecord[0];
 
   // Generate SVIP link if needed
-  if (!firstRecord.invite_svip && totalPayout >= 20 && totalPayout < 30) {
+  if (!firstRecord.invite_svip && totalPayout >= 10 && totalPayout < 30) {
     const invite = await bot.createChatInviteLink(SVIP_ID, {
       name: `Invite for ${uid}`,
       expire_date: 0, // permanent link
@@ -151,7 +152,7 @@ bot.on("message", async (msg) => {
   }
 
   // Build reply message based on totalPayout and stored links
-  if (totalPayout >= 20 && totalPayout < 30) {
+  if (totalPayout >= 10 && totalPayout < 30) {
     replyMsg = `
 CONGRATULATIONS 🎉🍾 YOUR ID IS VERIFIED ✅
 YOUR DEPOSIT: ${totalPayout}$ 💵💰
@@ -170,11 +171,11 @@ YOUR DEPOSIT: ${totalPayout}$ 💵💰
 
 ❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Sigma_Quotex_Trader
 📈 START TRADING LIKE A PRO TODAY!`;
-  } else if (totalPayout > 1 && totalPayout < 20) {
+  } else if (totalPayout > 1 && totalPayout < 10) {
     replyMsg = `
 ✅✅✅ ACCOUNT CREATED ✅✅✅
 
-YOUR DEPOSITED ${totalPayout}$ THAT IS LESS THAN 20$. PLEASE DEPOSIT THE REQUIRED AMOUNT ❤️
+YOUR DEPOSITED ${totalPayout}$ THAT IS LESS THAN 10$. PLEASE DEPOSIT THE REQUIRED AMOUNT ❤️
 
 ❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Sigma_Quotex_Trader
 📈 START TRADING LIKE A PRO TODAY!`;
