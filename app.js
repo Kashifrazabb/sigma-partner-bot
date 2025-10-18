@@ -117,13 +117,10 @@ bot.on("message", async (msg) => {
   }
 
   const totalPayout = traderRecord.reduce((sum, t) => sum + Number(t.payout || 0), 0);
-  const lastEvent = traderRecord[traderRecord.length - 1];
   var replyMsg = "";
 
-  // Use the first record to store invite links
   const firstRecord = traderRecord[0];
 
-  // Generate SVIP + COMPOUNDING link if totalPayout >= 30
   if (!firstRecord.invite_svip && !firstRecord.invite_comp) {
     const invite_svip = await bot.createChatInviteLink(SVIP_ID, {
       name: `Invite for ${uid}`,
