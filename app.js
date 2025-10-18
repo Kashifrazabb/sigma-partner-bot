@@ -123,19 +123,8 @@ bot.on("message", async (msg) => {
   // Use the first record to store invite links
   const firstRecord = traderRecord[0];
 
-  // Generate SVIP link if needed
-  if (!firstRecord.invite_svip && totalPayout >= 10 && totalPayout < 30) {
-    const invite = await bot.createChatInviteLink(SVIP_ID, {
-      name: `Invite for ${uid}`,
-      expire_date: 0, // permanent link
-      member_limit: 1,
-    });
-    firstRecord.invite_svip = invite.invite_link;
-    await writeDB(db);
-  }
-
   // Generate SVIP + COMPOUNDING link if totalPayout >= 30
-  if (!firstRecord.invite_svip && totalPayout >= 30) {
+  if (!firstRecord.invite_svip && !firstRecord.invite_comp) {
     const invite_svip = await bot.createChatInviteLink(SVIP_ID, {
       name: `Invite for ${uid}`,
       expire_date: 0,
