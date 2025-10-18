@@ -121,19 +121,25 @@ bot.on("message", async (msg) => {
 
   const firstRecord = traderRecord[0];
 
-  if (!firstRecord.invite_svip && !firstRecord.invite_comp) {
-    const invite_svip = await bot.createChatInviteLink(SVIP_ID, {
-      name: `Invite for ${uid}`,
-      expire_date: 0,
-      member_limit: 1,
-    });
-    const invite_comp = await bot.createChatInviteLink(COMPOUNDING_ID, {
-      name: `Invite for ${uid}`,
-      expire_date: 0,
-      member_limit: 1,
-    });
-    firstRecord.invite_svip = invite_svip.invite_link;
-    firstRecord.invite_comp = invite_comp.invite_link;
+  if (!firstRecord.invite_svip || !firstRecord.invite_comp) {
+    if (!firstRecord.invite_svip) {
+      const invite_svip = await bot.createChatInviteLink(SVIP_ID, {
+        name: `Invite for ${uid}`,
+        expire_date: 0,
+        member_limit: 1,
+      });
+      firstRecord.invite_svip = invite_svip.invite_link;
+    }
+
+    if (!firstRecord.invite_comp) {
+      const invite_comp = await bot.createChatInviteLink(COMPOUNDING_ID, {
+        name: `Invite for ${uid}`,
+        expire_date: 0,
+        member_limit: 1,
+      });
+      firstRecord.invite_comp = invite_comp.invite_link;
+    }
+
     await writeDB(db);
   }
 

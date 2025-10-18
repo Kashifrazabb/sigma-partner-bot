@@ -3676,7 +3676,9 @@
       "event_id": "68f22575188a7c6",
       "site_id": "N/A",
       "landing_id": "1123026",
-      "time": "2025-10-17T11:16:05.788Z"
+      "time": "2025-10-17T11:16:05.788Z",
+      "invite_svip": "https://t.me/+mvUsr9O4WGQxNmE0",
+      "invite_comp": "https://t.me/+oaOs-1b8n3RhMjMx"
     },
     {
       "trader_id": "66732201",
@@ -11279,6 +11281,66 @@
       "site_id": "N/A",
       "landing_id": "1123026",
       "time": "2025-10-18T11:23:10.874Z"
+    },
+    {
+      "trader_id": "68379510",
+      "click_id": "N/A",
+      "status": "conf",
+      "payout": "0",
+      "event_id": "68f379891898c11",
+      "site_id": "N/A",
+      "landing_id": "1123026",
+      "time": "2025-10-18T11:27:05.818Z"
+    },
+    {
+      "trader_id": "68231482",
+      "click_id": "N/A",
+      "status": "conf",
+      "payout": "0",
+      "event_id": "68f37a081898c8a",
+      "site_id": "N/A",
+      "landing_id": "1123026",
+      "time": "2025-10-18T11:29:12.606Z"
+    },
+    {
+      "trader_id": "69181735",
+      "click_id": "N/A",
+      "status": "reg",
+      "payout": "0",
+      "event_id": "68f37a3d1898ca1",
+      "site_id": "N/A",
+      "landing_id": "1123026",
+      "time": "2025-10-18T11:30:05.932Z"
+    },
+    {
+      "trader_id": "69181735",
+      "click_id": "N/A",
+      "status": "conf",
+      "payout": "0",
+      "event_id": "68f37b2d1898d5f",
+      "site_id": "N/A",
+      "landing_id": "1123026",
+      "time": "2025-10-18T11:34:05.956Z"
+    },
+    {
+      "trader_id": "69181735",
+      "click_id": "N/A",
+      "status": "conf",
+      "payout": "0",
+      "event_id": "68f37b2d1898d62",
+      "site_id": "N/A",
+      "landing_id": "1123026",
+      "time": "2025-10-18T11:34:06.137Z"
+    },
+    {
+      "trader_id": "69181735",
+      "click_id": "N/A",
+      "status": "conf",
+      "payout": "0",
+      "event_id": "68f37b2d1898d60",
+      "site_id": "N/A",
+      "landing_id": "1123026",
+      "time": "2025-10-18T11:34:06.369Z"
     }
   ]
 }
