@@ -8,7 +8,7 @@ config()
 
 const BOT_TOKEN = process.env.TOKEN;
 const SVIP_ID = -1002216197397;
-const COMPOUNDING_ID = -1002841055208;
+const COMPOUNDING_ID = -1003492565712;
 const PORT = 5000;
 const DB_FILE = "data.json";
 const WEBHOOK_URL = process.env.WEBHOOK_URL || "https://sigma-partner-bot.onrender.com";
