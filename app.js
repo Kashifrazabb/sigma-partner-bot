@@ -108,9 +108,8 @@ bot.on("message", async (msg) => {
 
 💵 DEPOSIT $10 OR MORE
 🎁 50% BONUS CODE: SIGMA50
-🎁 95% BONUS CODE: QX95BOOST
 
-❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Sigma_Quotex_Trader
+❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Teamrealsigma
 
 📈 START TRADING LIKE A PRO TODAY!`);
     return;
@@ -151,7 +150,7 @@ YOUR DEPOSIT: ${totalPayout}$ 💵💰
 
 1️⃣ LINK TO MY SVIP: ${firstRecord.invite_svip} 💚
 
-❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Sigma_Quotex_Trader
+❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Teamrealsigma
 📈 START TRADING LIKE A PRO TODAY!`;
   } else if (totalPayout >= 30) {
     replyMsg = `
@@ -161,7 +160,7 @@ YOUR DEPOSIT: ${totalPayout}$ 💵💰
 1️⃣ LINK TO MY SVIP: ${firstRecord.invite_svip} 💚
 2️⃣ LINK TO MY COMPOUNDING: ${firstRecord.invite_comp} 💛
 
-❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Sigma_Quotex_Trader
+❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Teamrealsigma
 📈 START TRADING LIKE A PRO TODAY!`;
   } else if (totalPayout > 1 && totalPayout < 10) {
     replyMsg = `
@@ -169,7 +168,7 @@ YOUR DEPOSIT: ${totalPayout}$ 💵💰
 
 YOUR DEPOSITED ${totalPayout}$ THAT IS LESS THAN 10$. PLEASE DEPOSIT THE REQUIRED AMOUNT ❤️
 
-❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Sigma_Quotex_Trader
+❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Teamrealsigma
 📈 START TRADING LIKE A PRO TODAY!`;
   } else {
     replyMsg = `
@@ -177,7 +176,7 @@ YOUR DEPOSITED ${totalPayout}$ THAT IS LESS THAN 10$. PLEASE DEPOSIT THE REQUIRE
 
 PLEASE DEPOSIT THE REQUIRED AMOUNT TO JOIN SIGMA VIP (SVIP) ❤️
 
-❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Sigma_Quotex_Trader
+❓ HAVE ANY QUESTIONS? CONTACT US DIRECTLY: @Teamrealsigma
 📈 START TRADING LIKE A PRO TODAY!`;
   }
 
